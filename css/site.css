@@ -115,6 +115,23 @@ html, body {
 .user-dropdown a {
     color: #000;
 }
-.menu-option {
+.user-dropdown-option {
     padding: .55rem .7rem;
+}
+
+.menu {
+    background-color: #4c5c66;
+    box-shadow: 3px 2px 11px 0px rgba(0,0,0,.3);
+    width: 278px;
+    margin-top: 59px;
+    height: 100%;
+}
+.menu a {
+    color: #fff;
+}
+.menu-list {
+
+}
+.menu-item {
+
 }
