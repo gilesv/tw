@@ -12,21 +12,36 @@ html, body {
     box-shadow: 0px 2px 11px 0px rgba(0,0,0,.3);
     height: 59px;
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     flex-flow: row wrap;
     align-items: center;
+    min-width: 312px;
 }
 .topnav-logo {
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     align-items: center;
     background-color: #fff;
     font-size: 1.8em;
     height: 100%;
     font-weight: 700;
     font-style: italic;
-    width: 218px;
+    max-width: 100px;
+    width: 100%;
     padding: 7px;
     color: #000;
     letter-spacing: 0px;
+}
+@media (min-width: 600px) {
+    .topnav-logo {
+        max-width: 218px;
+    }
 }
 .topnav-logo img {
     margin: auto;
@@ -35,20 +50,23 @@ html, body {
     height: 100%;
     width: 70px;
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
 }
 .topnav-botao img {
     margin: auto;
 }
 .notifications {
     height: 100%;
-    width: 70px;
-    padding: 0 15px;
+    width: 25px;
     display: inline-block;
 }
 .notifications i {
     margin: auto;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.25em;
 }
 .bubble {
     background-color: #9bd358;
@@ -56,7 +74,7 @@ html, body {
     width: 20px;
     height: 20px;
     font-size: .7em;
-    line-height: 19px;
+    line-height: 20px;
     text-align: center;
     font-weight: 600;
     position: absolute;
@@ -67,4 +85,36 @@ html, body {
 .user {
     display: inline-block;
     color: #fff;
+    font-size: .9em
+}
+.user span {
+    display: none;
+}
+@media (min-width: 600px) {
+    .user span {
+        display: inline-block;
+    }
+}
+.user i {
+    font-size: 1.45em;
+    margin-right: 13px;
+}
+#user-options {
+    display: inline-block;
+    color: #fff;
+}
+.user-dropdown {
+    border-radius: 0;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 0;
+    font-size: 1em;
+    min-width: 9rem;
+    margin: 11px 2px 0 14px;
+}
+.user-dropdown a {
+    color: #000;
+}
+.menu-option {
+    padding: .55rem .7rem;
 }

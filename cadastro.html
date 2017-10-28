@@ -4,9 +4,9 @@
         <title>Nova movimentação de pessoal</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/site.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/site.css">
     </head>
     <body>
         <nav class="topnav">
@@ -22,13 +22,16 @@
                     <i class="fa fa-bell-o" aria-hidden="true"></i>
                 </div>
                 <div class="user">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <span>Recursos Humanos</span>
+                    
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true" id="usericon"></i><span id="username">Recursos Humanos</span></a>
+                    <div class="dropdown-menu user-dropdown" aria-labelledby="user-options">
+                        <a class="dropdown-item menu-option" href="#">Sair</a>
+                    </div>
                 </div>
             </div>
             
         </nav>
         <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>     
+        <script src="js/bootstrap.bundle.min.js"></script>     
     </body>
 </html>
