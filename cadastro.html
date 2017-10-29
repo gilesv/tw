@@ -44,8 +44,8 @@
                         <h2>Informação básica</h2>
                         <div class="input-row">
                             <div class="input-box">
-                                <label for="tipo-formulario">Tipo do Formulário:<span class="required-star"></span></label>
-                                <select name="tipo-formulario">
+                                <label for="tipo-formulario" class="required-star">Tipo do Formulário:</label>
+                                <select class="required" name="tipo-formulario" id="tipo-formulario">
                                     <option>Contratação</option>
                                     <option>Solicitação</option>
                                     <option>Chamado</option>
@@ -54,8 +54,8 @@
                         </div>
                         <div class="input-row">
                             <div class="input-box">
-                                <label for="data-movimentacao">Data da Movimentação:<span class="required-star"></span></label>
-                                <input type="text" name="data-movimentacao" value="24/05/2017 13:35:06" />
+                                <label for="data-movimentacao" class="required-star">Data da Movimentação:</label>
+                                <input class="required" type="text" name="data-movimentacao" value="24/05/2017 13:35:06" id="data-movimentacao" />
                             </div>
                         </div>  
                     </div>
@@ -70,8 +70,8 @@
                         <h2>Contratação</h2>
                         <div class="input-row">
                             <div class="input-box">
-                                <label for="data-admissao">Data de Admissão<span class="required-star"></span></label>
-                                <input type="date" name="data-admissao" required/>
+                                <label for="data-admissao" class="required-star">Data de Admissão</label>
+                                <input class="required" type="date" name="data-admissao" id="data-admissao"/>
                             </div>
                         </div>
                         <div class="input-row">
@@ -82,8 +82,8 @@
                         </div>
                         <div class="input-row">
                             <div class="input-box">
-                                <label for="unidade">Unidade:<span class="required-star"></span></label>
-                                <select name="unidade" required>
+                                <label for="unidade" class="required-star">Unidade:</label>
+                                <select class="required" name="unidade" id="unidade">
                                     <option>-</option>
                                     <option>1</option>
                                     <option>2</option>
@@ -92,14 +92,14 @@
                                 </select>
                             </div>
                             <div class="input-box">
-                                <label for="salario">Salário (R$):<span class="required-star"></label>
-                                <input type="text" name="salario" />
+                                <label for="salario" class="required-star">Salário (R$):</label>
+                                <input class="required" type="text" name="salario" id="salario" />
                             </div>
                         </div>
                         <div class="input-row">
                             <div class="input-box">
-                                <label for="setor">Setor:<span class="required-star"></span></label>
-                                <select name="setor" required>
+                                <label for="setor" class="required-star">Setor:</label>
+                                <select class="required" name="setor" id="setor">
                                     <option>-</option>
                                     <option>1</option>
                                     <option>2</option>
@@ -108,8 +108,8 @@
                                 </select>
                             </div>
                             <div class="input-box">
-                                <label for="cargo">Cargo:<span class="required-star"></span></label>
-                                <select name="cargo" required>
+                                <label for="cargo" class="required-star">Cargo:</label>
+                                <select class="required" name="cargo" id="cargo">
                                     <option>-</option>
                                     <option>1</option>
                                     <option>2</option>
@@ -122,7 +122,7 @@
                         <div class="input-row">
                             <div class="input-box">
                                 <label for="coordenacao">Coordenação:</label>
-                                <select name="coordenacao" required>
+                                <select name="coordenacao">
                                     <option>-</option>
                                     <option>1</option>
                                     <option>2</option>
@@ -132,7 +132,7 @@
                             </div>
                             <div class="input-box">
                                 <label for="gerencia">Gerência:</label>
-                                <select name="gerencia" required>
+                                <select name="gerencia">
                                     <option>-</option>
                                     <option>1</option>
                                     <option>2</option>
@@ -160,8 +160,8 @@
                         </div>
                         <div class="input-row">
                             <div class="input-box-100">
-                                <label for="motivo-substituicao">Motivo da Substituição:<span class="required-star"></span></label>
-                                <select name="motivo-substituicao" required>
+                                <label for="motivo-substituicao" class="required-star">Motivo da Substituição:</label>
+                                <select class="required" name="motivo-substituicao" id="motivo-substituicao">
                                     <option>Selecione</option>
                                     <option>1</option>
                                     <option>2</option>
@@ -172,8 +172,8 @@
                         </div>
                         <div class="input-row">
                             <div class="input-box">
-                                <label for="regime-trabalho">Regime de Trabalho:<span class="required-star"></span></label>
-                                <select name="regime-trabalho" required>
+                                <label for="regime-trabalho" class="required-star">Regime de Trabalho:</label>
+                                <select class="required" name="regime-trabalho" id="regime-trabalho">
                                     <option>Selecione</option>
                                     <option>1</option>
                                     <option>2</option>
@@ -182,8 +182,8 @@
                                 </select>
                             </div>
                             <div class="input-box">
-                                <label for="carga-horaria">Carga Horária:<span class="required-star"></span></label>
-                                <select name="carga-horaria" required>
+                                <label for="carga-horaria" class="required-star">Carga Horária:</label>
+                                <select class="required" name="carga-horaria" id="carga-horaria">
                                     <option>Selecione</option>
                                     <option>1</option>
                                     <option>2</option>
@@ -194,8 +194,8 @@
                         </div>
                         <div class="input-row">
                             <div class="input-box-100">
-                                <label for="requisitos-perfil">Requisitos / Perfil:<span class="required-star"></span></label>
-                                <textarea name="requisitos-perfil" required></textarea>
+                                <label for="requisitos-perfil" class="required-star">Requisitos / Perfil:</label>
+                                <textarea class="required" name="requisitos-perfil" id="requisitos-perfil"></textarea>
                             </div>
                         </div>
                     </div>
@@ -210,8 +210,8 @@
                         <h2>Justificativa</h2>
                         <div class="input-row">
                             <div class="input-box-100">
-                                <label for="justificativa">Justificativa:<span class="required-star"></span></label>
-                                <textarea name="justificativa" required></textarea>
+                                <label for="justificativa" class="required-star">Justificativa:</label>
+                                <textarea class="required" name="justificativa" id="justificativa"></textarea>
                             </div>
                         </div>
                     </div>
@@ -255,7 +255,7 @@
                 </div>
                 <div class="form-buttons">
                     <button class="button-form">Cancelar e descartar</button>
-                    <button class="button-form">Salvar e enviar</button>
+                    <button action="submit" class="button-form" id="salvar">Salvar e enviar</button>
                 </div>
             </form>
         </section>
