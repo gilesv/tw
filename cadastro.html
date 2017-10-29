@@ -14,7 +14,7 @@
                 <img src="imagens/logo.jpg" alt="Logotipo" />
             </div>
             <div class="topnav-botao">
-                <img src="imagens/sandbotao.jpg" alt="Expandir" />
+                <img src="imagens/sandbotao.jpg" alt="Expandir" id="sandbotao" />
             </div>
             <div class="ml-auto">
                 <div class="notifications">
@@ -42,18 +42,22 @@
                 <div class="row secao">
                     <div class="col-md-8">
                         <h2>Informação básica</h2>
-                        <div class="input-box">
-                            <label for="tipo-formulario">Tipo do Formulário:<span class="required-star"></span></label>
-                            <select name="tipo-formulario">
-                                <option>Contratação</option>
-                            </select>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="tipo-formulario">Tipo do Formulário:<span class="required-star"></span></label>
+                                <select name="tipo-formulario">
+                                    <option>Contratação</option>
+                                    <option>Solicitação</option>
+                                    <option>Chamado</option>
+                                </select>
+                            </div>
                         </div>
-                        
-                        <div class="input-box">
-                            <label for="data-movimentacao">Data da Movimentação:<span class="required-star"></span></label>
-                            <input type="text" name="data-movimentacao" value="24/05/2017 13:35:06" />
-                        </div>
-                        
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="data-movimentacao">Data da Movimentação:<span class="required-star"></span></label>
+                                <input type="text" name="data-movimentacao" value="24/05/2017 13:35:06" />
+                            </div>
+                        </div>  
                     </div>
                     <div class="col-md-4 side-info">
                         <span class="text-over-h3">Informação básica</span>
@@ -64,6 +68,80 @@
                 <div class="row secao">
                     <div class="col-md-8">
                         <h2>Contratação</h2>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="data-admissao">Data de Admissão<span class="required-star"></span></label>
+                                <input type="date" name="data-admissao" required/>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box-100">
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome" />
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="unidade">Unidade:<span class="required-star"></span></label>
+                                <select name="unidade" required>
+                                    <option>-</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="salario">Salário (R$):<span class="required-star"></label>
+                                <input type="text" name="salario" />
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="setor">Setor:<span class="required-star"></span></label>
+                                <select name="setor" required>
+                                    <option>-</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="cargo">Cargo:<span class="required-star"></span></label>
+                                <select name="cargo" required>
+                                    <option>-</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="coordenacao">Coordenação:</label>
+                                <select name="coordenacao" required>
+                                    <option>-</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="gerencia">Gerência:</label>
+                                <select name="gerencia" required>
+                                    <option>-</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="col-md-4 side-info">
                         <span class="text-over-h3">Informações do candidato</span>
@@ -71,8 +149,117 @@
                         <p class="description">Informe os dados do candidato para contratação. Data da admissão, nome do candidato, cargo, salário, unidade, setor, coordenação e gerência.</p>
                     </div>
                 </div>
+                <div class="row secao">
+                    <div class="col-md-8">
+                        <h2>Contratação</h2>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="aumento-quadro">Aumento de Quadro:</label>
+                                <input type="checkbox" class="check-box" name="aumento-quadro"/>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box-100">
+                                <label for="motivo-substituicao">Motivo da Substituição:<span class="required-star"></span></label>
+                                <select name="motivo-substituicao" required>
+                                    <option>Selecione</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="regime-trabalho">Regime de Trabalho:<span class="required-star"></span></label>
+                                <select name="regime-trabalho" required>
+                                    <option>Selecione</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="carga-horaria">Carga Horária:<span class="required-star"></span></label>
+                                <select name="carga-horaria" required>
+                                    <option>Selecione</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box-100">
+                                <label for="requisitos-perfil">Requisitos / Perfil:<span class="required-star"></span></label>
+                                <textarea name="requisitos-perfil" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 side-info">
+                        <span class="text-over-h3">Informações do contratação</span>
+                        <h3>Detalhes da contratação</h3>
+                        <p class="description">Informe os dados relacionados a contratação, aumento de quadro, motivo da substituição, regime de trabalho, carga horária e requisitos/perfil.</p>
+                    </div>
+                </div>
+                <div class="row secao">
+                    <div class="col-md-8">
+                        <h2>Justificativa</h2>
+                        <div class="input-row">
+                            <div class="input-box-100">
+                                <label for="justificativa">Justificativa:<span class="required-star"></span></label>
+                                <textarea name="justificativa" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="description" id="desc-justificativa">Descreva de forma sucinta uma justificativa para a movimentação do colaborador.</p>
+                    </div>
+                </div>
+                <div class="row secao">
+                    <div class="col-md-8">
+                        <h2>Movimentações de pessoal relacionadas</h2>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="justificativa">Inserir número ou nome do funcionário da MP:</label>
+                                <input type="text" name="relacionadas" placeholder="Escreva ou duplo clique para listar"/>
+                            </div>
+                            <div class="input-box">
+                                <button id="button-adicionar"><i class="fa fa-plus" aria-hidden="true" id="add"></i>Adicionar</button>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <table class="table-relacionadas">
+                                <thead>
+                                    <tr>
+                                        <th id="th-numero">Número</th>
+                                        <th>Funcionário</th>
+                                    </tr>
+                                    
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2">Nenhum registro cadastrado...</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                    
+                </div>
+                <div class="form-buttons">
+                    <button class="button-form">Cancelar e descartar</button>
+                    <button class="button-form">Salvar e enviar</button>
+                </div>
             </form>
         </section>
+        <footer></footer>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/site.js"></script>     
