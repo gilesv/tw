@@ -54,6 +54,7 @@ html, body {
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
+    cursor: pointer;
 }
 .topnav-botao img {
     margin: auto;
@@ -118,20 +119,99 @@ html, body {
 .user-dropdown-option {
     padding: .55rem .7rem;
 }
-
 .menu {
+    position: fixed;
     background-color: #4c5c66;
     box-shadow: 3px 2px 11px 0px rgba(0,0,0,.3);
     width: 278px;
     margin-top: 59px;
+    margin-left: -285px;
     height: 100%;
+    transition: all .4s;
+}
+.menu-show {
+    margin-left: 0;
+    transition: all .4s;
 }
 .menu a {
     color: #fff;
 }
+.menu a:hover {
+    text-decoration: none;
+}
 .menu-list {
-
+    padding-left: 0;
 }
 .menu-item {
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid #333333;
+    font-size: 12px;
+    font-weight: 600;
+}
+.menu-item:hover {
+    background-color: rgba(0,0,0,.1);
+}
 
+.main-content {
+    width: 90%;
+    height: 100%;
+    margin: 83px auto 0 auto;
+}
+h1 {
+    font-size: 1em;
+    font-weight: 600;
+}
+h2 {
+    font-size: .9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #737373;
+    margin: 11px 0 36px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
+}
+.secao {
+    background-color: #eff3f6;
+    padding: 19px 14px;
+    margin: 13px 0;
+}
+h3 {
+    color: #4c5c66;
+    font-size: .9em;
+    font-weight: 600;
+    margin-top: 9px;
+}
+h3::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 18px;
+    margin-right: 11px;
+    vertical-align: middle;
+    background-color: #99cc66;
+}
+.text-over-h3 {
+    color: #4c5c66;
+    font-size: .65em;
+    text-transform: uppercase;
+}
+.side-info {
+    margin-top: 40px;
+}
+.description {
+    color: #4c5c66;
+    font-size: .75em;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.input-box {
+    margin-bottom: 15px;
+}
+.input-box label {
+    color: #999999;
+    display: block;
+    font-size: .6em;
+    font-weight: 600;
+    margin-bottom: 0;
 }

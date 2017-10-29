@@ -28,7 +28,6 @@
                     </div>
                 </div>
             </div>
-            
         </nav>
         <aside class="menu">
             <ul class="menu-list">
@@ -37,7 +36,45 @@
                 <a href="#"><li class="menu-item">Relatórios</li></a>
             </ul>
         </aside>
+        <section class="main-content">
+            <h1>Nova Movimentação de Pessoal</h1>
+            <form method="post" action="">
+                <div class="row secao">
+                    <div class="col-md-8">
+                        <h2>Informação básica</h2>
+                        <div class="input-box">
+                            <label for="tipo-formulario">Tipo do Formulário:<span class="required-star"></span></label>
+                            <select name="tipo-formulario">
+                                <option>Contratação</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-box">
+                            <label for="data-movimentacao">Data da Movimentação:<span class="required-star"></span></label>
+                            <input type="text" name="data-movimentacao" value="24/05/2017 13:35:06" />
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-4 side-info">
+                        <span class="text-over-h3">Informação básica</span>
+                        <h3>Como preencher essa seção</h3>
+                        <p class="description">Selecione o tipo de movimentação de pessoal</p>
+                    </div>
+                </div>
+                <div class="row secao">
+                    <div class="col-md-8">
+                        <h2>Contratação</h2>
+                    </div>
+                    <div class="col-md-4 side-info">
+                        <span class="text-over-h3">Informações do candidato</span>
+                        <h3>Observações adicionais sobre os campos</h3>
+                        <p class="description">Informe os dados do candidato para contratação. Data da admissão, nome do candidato, cargo, salário, unidade, setor, coordenação e gerência.</p>
+                    </div>
+                </div>
+            </form>
+        </section>
         <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>     
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/site.js"></script>     
     </body>
 </html>
