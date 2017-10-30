@@ -3,16 +3,25 @@ $(document).ready(function() {
     $('#salario').bind('keypress',mask.money);
     $('#salario').bind('keyup',mask.money);
     toggleMenu();
+    $("#collapse-tr").click(function() {
+        if($(".tr-collapse").hasClass("show")) {
+            $(".tr-collapse").removeClass("show");
+            $("#collapse-tr").removeClass("twisted");
+        } else {
+            $(".tr-collapse").addClass("show");
+            $("#collapse-tr").addClass("twisted");
+        }
+    });
 });
 
 function toggleMenu() {
     $(".topnav-botao").click(function() {
         if($(".menu").hasClass("menu-show")) {
             $(".menu").removeClass("menu-show");
-            $("#sandbotao").removeClass("topnav-twisted");
+            $("#sandbotao").removeClass("twisted");
         } else {
             $(".menu").addClass("menu-show");
-            $("#sandbotao").addClass("topnav-twisted");
+            $("#sandbotao").addClass("twisted");
         }
     });
 }

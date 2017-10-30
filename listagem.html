@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listagem de Movimentações de Pessoal</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/site.css">
+    </head>
+    <body>
+        <nav class="topnav">
+            <div class="topnav-logo">
+                <img src="imagens/logo.jpg" alt="Logotipo" />
+            </div>
+            <div class="topnav-botao">
+                <img src="imagens/sandbotao.jpg" alt="Expandir" id="sandbotao" />
+            </div>
+            <div class="ml-auto">
+                <div class="notifications">
+                    <div class="bubble">41</div>
+                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                </div>
+                <div class="user">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true" id="usericon"></i><span id="username">Recursos Humanos</span></a>
+                    <div class="dropdown-menu user-dropdown" aria-labelledby="user-options">
+                        <a class="dropdown-item user-dropdown-option" href="#">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <aside class="menu">
+            <ul class="menu-list">
+                <a href="#"><li class="menu-item">Painel de Controle</li></a>
+                <a href="listagem.html"><li class="menu-item">Movimentação de Pessoal</li></a>
+                <a href="#"><li class="menu-item">Relatórios</li></a>
+            </ul>
+        </aside>
+        <section class="main-content">
+            <div class="title-head">
+                <h1>Movimentações de Pessoal</h1>
+                <a href="cadastro.html"><button id="button-nova"><i class="fa fa-plus-circle" aria-hidden="true" id="add"></i>Nova</button></a>
+            </div>
+            
+            <div class="row listagem">
+                <div class="pesquisa-campos">
+                    <div class="input-pesquisa" id="input-numero">
+                        <label for="numero" class="pesquisa">Número:</label>
+                        <input type="number" name="numero"/>
+                    </div>
+                    <div class="input-pesquisa" id="input-tipo">
+                        <label for="tipo" class="pesquisa">Tipo:</label>
+                        <select name="tipo">
+                            <option>Selecione</option>
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                    <div class="input-pesquisa" id="input-status">
+                        <label for="status" class="pesquisa">Status:</label>
+                        <select name="status">
+                            <option>Selecione</option>
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                    <div class="input-pesquisa" id="input-de">
+                        <label for="de" class="pesquisa">De:</label>
+                        <input type="date" name="de" />
+                    </div>
+                    <div class="input-pesquisa" id="input-ate">
+                        <label for="ate" class="pesquisa">Até:</label>
+                        <input type="date" name="ate" />
+                    </div>
+                </div>
+                <div class="pesquisa-checks">
+                    <div class="check-options">
+                        <input type="checkbox" class="check-box" name="exibir" />
+                        <label for="exibir" class="checkbox-label">Exibir apenas MP's criadas por mim</label>
+                    </div>
+                    <div class="check-options">
+                        <input type="checkbox" class="check-box-disabled" disabled="true" name="aguardando" />
+                        <label for="aguardando" class="checkbox-label">MP's aguardando por minha aprovação<i class="fa fa-info-circle" aria-hidden="true"></i></label>    
+                    </div>
+                    
+                </div>
+                <div class="pesquisa-botoes">
+                    <button id="pesquisar">Pesquisar</button>
+                    <button id="limpar">Limpar</button>
+                </div>
+            </div>
+            
+            <div class="row listagem">
+                <div class="rolagem-horizontal">
+                    <table class="tabela-listagem">
+                        <thead>
+                            <tr id="white-td">
+                                <th>Número</th>
+                                <th>Tipo de Movimentação</th>
+                                <th id="status-th">Status</th>
+                                <th>Colaborador</th>
+                                <th>Data de Criação</th>
+                                <th>Solicitante</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MP 216/2017</td>
+                                <td>Movimentação</td>
+                                <td><div class="tag finalizada">Finalizada</div></td>
+                                <td>VITÓR DIAS PEREIRA</td>
+                                <td>4 Mai (3 semanas atrás)</td>
+                                <td>Recursos Humanos</td>
+                                <td><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td>MP 217/2017</td>
+                                <td>Desligamento</td>
+                                <td><div class="tag reprovada">Reprovada</div></td>
+                                <td>GUILHERME COSTA FERREIRA</td>
+                                <td>4 Mai (3 semanas atrás)</td>
+                                <td>Recursos Humanos</td>
+                                <td><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td>MP 218/2017</td>
+                                <td>Contratação</td>
+                                <td><div class="tag pendente">Pendente de Aprovação</div></td>
+                                <td>ÍTALO SIMÕES</td>
+                                <td>4 Mai (3 semanas atrás)</td>
+                                <td>Coordenador Emitente</td>
+                                <td><i id="collapse-tr" class="fa fa-chevron-circle-down" aria-hidden="true"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="step-container tr-collapse">
+                        <div class="line"><div class="green"></div></div>
+                        <div class="step">
+                            <div class="step-icon completed"><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <h4>Encaminhada</h4>
+                            <p>Silvana Rodrigues<br/>4/5/2017 às 12:02</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon completed"><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <h4>Aprovado GGP</h4>
+                            <p>Recursos Humanos<br/>4/5/2017 às 12:07</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <h4>Aprovado Gerente</h4>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <h4>Aprovado Diretor</h4>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <h4>Aprovado Superintendente</h4>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <h4>Aprovado Provedor</h4>
+                        </div>
+                    </div>
+                </div>
+                <span id="count">3 registros</span>
+            </div>
+        </section>
+        <footer></footer>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/site.js"></script>     
+    </body>
+</html>

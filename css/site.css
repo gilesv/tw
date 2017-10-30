@@ -1,5 +1,5 @@
 html, body {
-    height: 100%;
+    /* height: 100%; */
     font-family: Arial, sans-serif;
 }
 .topnav {
@@ -59,7 +59,7 @@ html, body {
 .topnav-botao img {
     margin: auto;
 }
-.topnav-twisted {
+.twisted {
     transform: rotate(180deg);
 }
 .notifications {
@@ -297,7 +297,8 @@ select::-ms-expand {
 }
 
 input[type="date"] {
-    background:#fff url(../imagens/calendar.png) 97% no-repeat;
+    background:#fff url(../imagens/calendar.png) 94% no-repeat;
+    text-transform: uppercase;
     color: #919191;
 }
 ::-webkit-calendar-picker-indicator {
@@ -325,6 +326,17 @@ input[type="date"] {
     background-position-x: -2px;
     background-position-y: -2px;
 }
+.check-box-disabled {
+    width: 20px;
+    height: 20px;
+    border-left: 1px solid #585858;
+    border-top: 1px solid #585858;
+    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    background-color: #f0f0f0;
+    position: relative;
+    outline: none;
+}
 input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none; 
@@ -346,6 +358,7 @@ input[type="button"], button  {
     }
 }
 #button-adicionar {
+    min-width: 118px;
     margin-top: 27px;
     margin-left: 10px;
     border: 0;
@@ -384,6 +397,9 @@ footer {
     width: 100%;
     background-color: #a6a6a6;
     height: 40px;
+    margin-top: 71px;
+    /* position: absolute;
+    bottom: 0; */
 }
 
 .table-relacionadas {
@@ -406,9 +422,270 @@ footer {
 #th-numero {
     width: 86px;
 }
-.table-relacionadas td {
+#td-relacionadas {
+    text-align: left;
+    font-weight: 400;
     text-transform: none;
     font-size: 1.2em;
     padding: 4px 16px;
     background-color: #fafafa;
+}
+/* LISTAGEM */
+.title-head {
+    display: flex;
+    justify-content: space-between;
+}
+#button-nova {
+    border: 0;
+    background-color: #6f985c;
+    color: #fff;
+    padding: 9px 33px 9px 20px;
+    min-width: 120px;
+    max-height: 33px;
+}
+#button-nova i {
+    margin-right: 28px;
+    font-size: 1.2em;
+}
+.listagem {
+    padding: 19px 14px;
+    border-bottom: 1px solid #eaeaeb;
+}
+@media (min-width: 400px) {
+    .listagem {
+        padding: 15px 74px 12px 72px;
+    }
+}
+.pesquisa-campos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.input-pesquisa {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+#input-numero, #input-tipo, #input-status, #input-de, #input-ate {
+    flex-basis: 100%;
+}
+label.pesquisa {
+    margin-bottom: 0;
+    margin-top: 11px;
+    font-size: 0.65em;
+    color: #737373;
+}
+@media (min-width: 1090px) {
+    #input-numero {
+        flex-basis: 15%;
+    }
+    #input-tipo, #input-status {
+        flex-basis: 24%;
+    }
+    #input-de, #input-ate {
+        flex-basis: 15%;
+    }
+    label.pesquisa {
+        margin-bottom: 11px;
+        margin-top: 0;
+    }
+}
+.pesquisa-checks {
+    width: 100%;
+    margin-bottom: 8px;
+}
+.check-options {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-right: 26px;
+}
+label.checkbox-label {
+    display: inline-block;
+    font-size: 0.65em;
+    color: #737373;
+    margin-left: 8px;
+}
+.checkbox-label i { 
+    color:#003a59;
+    font-size: 1.3em;
+}
+.pesquisa-botoes {
+    width: 100%;
+}
+.pesquisa-botoes button {
+    display: block;
+    width: 100%;
+    margin-right: 20px;
+    text-transform: none;
+    border: 1px solid #003a59;
+    margin-bottom: 20px;
+}
+@media (min-width: 400px) {
+    .pesquisa-botoes button {
+        display: inline-block;
+        width: auto;
+    }
+}
+#pesquisar {
+    background-color: #003a59;
+    color: #fff;
+}
+#limpar {
+    background-color: #fff;
+    color: #003a59;
+}
+.rolagem-horizontal {
+    width: 100%;
+    overflow-x: auto;
+}
+@media (min-width: 810px) {
+    .rolagem-horizontal {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+.tabela-listagem {
+    width: 100%;
+    background-color: #fff;
+    font-size: .75em;
+    margin-top: 21px;
+}
+.tabela-listagem thead {
+    box-shadow: 0px 3px 7px -1px rgba(0,0,0,.2);
+    border-right: 1px solid #f2f4f7;
+    border-left: 1px solid #f2f4f7;
+    border-bottom: 1px solid #dedede;
+    font-weight: 600;
+}
+.tabela-listagem tr {
+    z-index: -1;
+    position: relative;
+}
+.tabela-listagem th, td {
+    padding: 10px;
+}
+.tabela-listagem tr:nth-child(even), #white-td {
+    background-color: #fff;
+}
+.tabela-listagem tr:nth-child(odd) {
+    background-color: #f2f4f7;
+}
+.tabela-listagem i {
+    color: #003a59;
+    font-size: 1.6em;
+}
+td:nth-child(1) {
+    text-align: center;
+    font-weight: 600;
+}
+.tag {
+    font-size: .8em;
+    color: #fff;
+    font-weight: 600;
+    /* text-align: center; */
+    border-radius: 3px;
+    padding: 5px 10px;
+    display: inline;
+}
+.tag.finalizada {
+    background-color: #6f985c;
+}
+.tag.reprovada {
+    background-color: #ff7a0b;
+}
+.tag.pendente {
+    background-color: #779bcc;
+}
+#status-th {
+    min-width: 150px;
+}
+#count {
+    font-size: .7em;
+    font-weight: 600;
+    display: block;
+    margin-top: 20px;
+    color: #737373;
+}
+.tr-collapse {
+    transition: all .3s;
+    height: 0px;
+    overflow: hidden;
+}
+.tr-collapse.show {
+    height: 135px;
+    padding: 30px 0;
+}
+.step-container {
+    width: 200%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+@media (min-width: 810px) {
+    .step-container {
+        width: 100%;
+    }
+}
+.step-container h4 {
+    font-size: .75em;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.step-container p {
+    font-size: .65em;
+}
+.step {
+    text-align: center;
+}
+.step-icon {
+    border-radius: 50%;
+    font-size: 1em;
+    background-color: #cccccc;
+    color: transparent;
+    width: 23px;
+    height: 23px;
+    margin: 3px auto;
+}
+.step-icon.completed {
+    background-color: #9bd358;
+    color: #fff;
+}
+.line {
+    opacity: 0;
+    margin: 13px auto;
+    background-color: #cccccc;
+    height: 3px;
+    width: 60%;
+    display: none;
+    position: relative;
+    z-index: -2;
+}
+.green {
+    width: 40%;
+    background-color: #9bd358;
+    margin: 0;
+    height: 3px;
+    /* display: none; */
+    position: relative;
+    z-index: -1;
+}
+@media (min-width: 760px) {
+    .line {
+        width: 65%;
+        opacity: 1;
+    }
+    .green {
+        width: 35%;
+    }
+}
+div.tr-collapse.show > div.line {
+    display: block;
+    position: absolute;
+}
+div.tr-collapse.show > div.green {
+    display: block;
+    position: absolute;
 }
